@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Data analysis</title>
+        <style>
+            body {
+                background-color: #040404;
+                color: #f4f4f4;
+                font-family: Arial;
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+                font-weight: bold;
+            }
+            h1,
+            h2,
+            label {
+                margin: 30px;
+            }
+            input {
+                margin: 5px;
+                padding: 10px;
+                border-top-right-radius: 0.5em;
+                border-top-left-radius: 0.5em;
+            }
+            table {
+                width: auto;
+                margin: 50px auto;
+                border-spacing: 0;
+                transition: 0.3s all;
+            }
+            th {
+                padding: 10px;
+                color: #f4f4f4;
+                border: 1px solid #f4f4f4;
+            }
+            td {
+                border: 1px solid #f4f4f4;
+                padding: 10px;
+            }
+            .metric > td {
+                background-color: #232725;
+            }
+            .metric:hover {
+                color: #13e410;
+            }
+            tr:hover {
+                background-color: #6a573d;
+            }
+            .nav {
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+                margin: 25px;
+            }
+            button,
+            select {
+                padding: 10px;
+                font-weight: bold;
+                font-size: 1.3em;
+                background-color: #482b2b;
+                color: #f4f4f4;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Data analysis starter</h1>
+        <h2 class="current-page"></h2>
+        <label
+            >Найди нужную компанию:<input
+                class="input-filter-companies"
+                type="text"
+                placeholder="Company name..."
+        /></label>
+        <table>
+            <thead></thead>
+            <tbody></tbody>
+            <tfoot></tfoot>
+        </table>
+        <div class="nav">
+            <button class="prev-page">&lt;</button>
+            <select class="count-of-page" id="countOfPage">
+                <option value="10">10</option>
+                <option value="50">50</option>
+                <option value="100">100</option>
+            </select>
+            <button class="next-page">&gt;</button>
+        </div>
+        <script src="./src/index.js" type="module"></script>
+    </body>
+</html>
